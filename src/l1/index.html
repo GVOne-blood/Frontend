@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/58d4e782be.js" crossorigin="anonymous"></script>
+    <title>DEMO</title>
+   <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="demo">
+    <div id="header">
+        <h2 id="title">Todo App</h2>
+        <div class="header-row">
+            <input id="search_inp" type="text" placeholder="Add a new task...">
+            <button id="btn_add" onclick="addNewItem()"><i class="fa-solid fa-plus" style="color: #ffffff;"></i></button>
+        </div>
+        <p id="notify"></p>
+    </div>
+    <div id="body">
+        <ul id="tasks">
+            <li>
+                
+               <!-- <div id="delete"> <i class="fa-solid fa-trash" style="color: #ffffff;"></i></div>
+                 -->
+               <div>
+                    <p class="itemVal">Buy a new gaming laptop</p>
+                </div>
+            </li>
+            <li  >
+                <div>
+                    <p class="itemVal">Complete a previous task</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p class="itemVal">Create video for Youtube</p>
+                </div>
+            </li>
+            <li >
+                <div>
+                    <p class="itemVal">Create new fk bloody</p>
+                </div>
+            </li>
+            <li >
+                <div>
+                    <p class="itemVal">Hire a nigga </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div id="footer">
+        <p id="note">You have <span id="cnt_task">5</span> pending tasks</p>
+        <button onclick="clearAll(event)" id="btn_clear" value="Clear All">Clear All</button>
+    </div>
+    </div>
+     <script src="./mainl1.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+</body>
+</html>

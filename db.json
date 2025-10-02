@@ -1,0 +1,36 @@
+{
+  "user": [
+    {
+      "firstName": "tuan",
+      "lastName": "anh",
+      "email": "dta150904@email.com",
+      "phone": "0123456789",
+      "dateOfBirth": "06/05/2003",
+      "gender": "other",
+      "username": "fdfd",
+      "password": "password",
+      "status_user": "inactive",
+      "status": "inactive",
+      "type": "admin",
+      "addresses": [
+        {
+          "apartmentNumber": "10",
+          "floor": "10",
+          "building": "A",
+          "streetNumber": "10",
+          "street": "Wall street",
+          "city": "Hanoi",
+          "country": "Vietnam",
+          "addressType": 1
+        }
+      ],
+      "id": "0974"
+    },
+    
+    {
+      "id": "f0aa",
+      "firstName": "tuan",
+      "lastName": "anh"
+    }
+  ]
+}
