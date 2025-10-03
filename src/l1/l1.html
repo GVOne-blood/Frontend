@@ -13,13 +13,15 @@
         <h2 id="title">Todo App</h2>
         <div class="header-row">
             <input id="search_inp" type="text" placeholder="Add a new task...">
-            <button id="btn_add" onclick="addNewItem()"><i class="fa-solid fa-plus" style="color: #ffffff;"></i></button>
-        </div>
-        <p id="notify"></p>
+            <button id="btn_add" onclick="addNewItem()"><i class="fa-solid fa-plus fa-xl" style="color: #ffffff;"></i></button>
+            <p id="notify"></p>
+       </div>
+        <input id="keyword" type="text" oninput="search()" placeholder="Search for a task...">
+            <button onclick="search(event)" id="btn_search"><i class="fa-solid fa-magnifying-glass fa-xl" style="color: #ffffff;"></i></button>
     </div>
     <div id="body">
         <ul id="tasks">
-            <li>
+            <li draggable="true" ondragstart="return onDragHandle(event)">
                 
                <!-- <div id="delete"> <i class="fa-solid fa-trash" style="color: #ffffff;"></i></div>
                  -->

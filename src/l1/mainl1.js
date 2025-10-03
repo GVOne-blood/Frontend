@@ -1,15 +1,17 @@
 
 var notify = document.querySelector('#notify')
-var tasks = document.getElementById('tasks');
-Sortable.create(tasks, {
-    animation: 150
-});
-var listTask =tasks
-
+var tasks = document.querySelectorAll('.itemVal')
+var listTask = []
 
 function validateInput(content){
-    console.log(content)
+    console.log(tasks)
     if (content == null || content.length < 3) {
+    //var keyword = document.getElementById('keyword').value
+
+                if (listTask.includes(content))
+                    {  notify.textContent = 'This task already exists '
+                        return false}
+        console.log(listTask)
         notify.textContent = 'Invalid input ';
         return false;
     }
@@ -71,9 +73,40 @@ window.addEventListener('DOMContentLoaded', function() {
         li.addEventListener('mouseleave', hideDelete);
     });
 });
+function search(ev) {
+    var keyword = document.getElementById('keyword').value.trim().toLowerCase();
+    var tasks = document.querySelectorAll('#tasks li');
+    var found = false;
 
+    tasks.forEach(function(li) {
+        var text = li.querySelector('.itemVal').textContent.toLowerCase();
+        if (text.includes(keyword)) {
+            li.style.display = '';
+            found = true;
+        } else {
+            li.style.display = 'none';
+        }
+    });
+
+    if (!found) {
+        notify.textContent = 'No task found';
+    } else {
+        notify.textContent = '';
+    }
+}
 function clearAll(event) {
     var tasks = document.getElementById('tasks');
     tasks.innerHTML = '';
     document.getElementById('cnt_task').textContent = '0';
+}
+
+function onDragHandle(event){
+    event.dataTransfer.effectAllowed = 'move';
+        ev.dataTransfer.setData("Text", ev.target.getAttribute('id'));
+            ev.dataTransfer.setDragImage(ev.target,0,0);
+            
+            return true;
+}
+function onDrop(event){
+
 }

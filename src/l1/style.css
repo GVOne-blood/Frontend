@@ -34,11 +34,11 @@ font-weight: bold;
     padding: 3% 3%;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 #body{
     width: 85%;
+    margin-bottom: 10px;
     display: inline;
     overflow-y: auto;
 }
@@ -67,11 +67,6 @@ li:hover{
     color: white;
     background: linear-gradient(90deg, #ff758c 0%, #ff7eb3 100%);
 }
-
-#notify{
-    color: rgb(248, 73, 73);
-}
-
 .delete{
     background-color: rgb(255, 99, 99);
     width: 20%;
@@ -109,28 +104,50 @@ li:hover{
     align-items: center;
 }
 .header-row {
-    width: 95%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
 }
+#notify{
+    color: rgb(248, 73, 73);
+    width: 100%;
+    display: block;
+     flex-basis: 100%;
+}
+
 
 #search_inp{
     border: dashed 2px;
+    width: 100%;
     border-color: rgb(255, 172, 251);
-    flex: 1;
-    min-width: 0;
     padding: 8px 12px;
     border-radius: 5px;
-    height: 48px;
+    height: 30px;
     font-size: 18px;
-    box-sizing: border-box;
 }
 
 #btn_add{
     background: #8c57ee;
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 5px;
+   
+}
+
+#keyword{
+    border: dashed rgb(112, 227, 250) 2px;
+    border-radius: 5px;
+    width: 79%;
+     padding: 8px 12px;
+     font-size: 18px;
+    height: 30px;
+}
+#btn_search{
+        background: #8c57ee;
     border: none;
     width: 48px;
     height: 48px;
