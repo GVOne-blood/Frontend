@@ -1,6 +1,6 @@
 
 var notify = document.querySelector('#notify')
-var tasks = document.querySelectorAll('.itemVal')
+var www = document.querySelectorAll('.itemVal')
 var listTask = []
 
 function validateInput(content){
@@ -39,6 +39,7 @@ function addNewItem(){
     li.addEventListener('mouseleave', hideDelete);
     tasks.appendChild(li);
     document.getElementById('cnt_task').textContent = tasks.children.length;
+    document.getElementById('search_inp').value = ''
 }
 
 var deleteHtml = `<div class="delete"><i class="fa-solid fa-trash" style="color: #ffffff;"></i></div>`;
